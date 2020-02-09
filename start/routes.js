@@ -18,6 +18,8 @@ const Route = use("Route");
 
 Route.on("/").render("welcome");
 
-Route.resource("Companies", "CompaniesController")
+Route.resource("companies", "CompaniesController")
   .apiOnly()
   .formats(["json"]);
+
+Route.resource("faker", "FakerController").apiOnly();
