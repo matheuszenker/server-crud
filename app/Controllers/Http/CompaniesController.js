@@ -4,7 +4,9 @@ const Company = use("App/Models/Company");
 class CompaniesController {
   // index: Listar todos registros;
   async index({ request, response }) {
-    return await Company.all();
+    const page = request.input("page", 1);
+
+    return await Company.query().paginate(page);
   }
 
   // show: Exibir um registro;
