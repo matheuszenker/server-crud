@@ -9,7 +9,7 @@ class FakerController {
 
     const data = [];
 
-    for (let index = 0; index < 100; index++) {
+    for (let index = 0; index < 1000; index++) {
       data.push({
         title: chance.name(),
         cnpj: chance.integer({ min: 100000000000, max: 999999999999 }),

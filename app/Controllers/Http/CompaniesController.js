@@ -5,8 +5,9 @@ class CompaniesController {
   // index: Listar todos registros;
   async index({ request, response }) {
     const page = request.input("page", 1);
+    const limit = request.input("limit", 10);
 
-    return await Company.query().paginate(page);
+    return await Company.query().paginate(page, limit);
   }
 
   // show: Exibir um registro;
